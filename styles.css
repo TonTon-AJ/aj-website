@@ -1,21 +1,22 @@
 body{
     margin: 0;
     padding: 0;
-    background: rgb(0, 0, 0)
+    background: black
 } 
 .HeaderNadpis{
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-style: oblique;
     color: beige;
     height: auto;
-    margin: auto;
     border: none;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    top: -15px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    top: -5px;
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
+        
 }
 .HeaderLogo{
     background-image: url(./pictures/bilelogo.png);
@@ -39,7 +40,6 @@ body{
     padding: 10px;
     border-radius: 25px;
     background-color: white;
-    margin: center;
 }
 ul{
     display: flex;
@@ -54,25 +54,28 @@ li{
     margin-top: auto;
     top: -50px;
 }
-.UvodNadpis{
-    height: 200px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 120px;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    color: white;
-    margin: auto;
-    padding-top: 50px;
-    text-decoration-line: overline underline;
-}
 .Uvod{
+    height: 250px;
+    display: flex;
     background-image: url(./pictures/coll.png);
     background-repeat: no-repeat;
-    background-size: cover;
-    background: 0.2;
+    background-size:cover;
+    padding-bottom: 50px;
 }
-
+.Uvod::before{
+    opacity: 0.2;
+}
+.UvodNadpis{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 120px;
+    text-decoration-line: overline underline;
+    position: relative;
+    text-align: center;
+    text-shadow: black 10px 10px 10px;
+    font-weight: bold;
+    top: -20px;
+    color: rgb(255, 255, 255);
+}
 section{
     height: max-content;
     color:white;
@@ -80,51 +83,54 @@ section{
     flex-direction: column;
     font-size: 55px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: auto;
 }
 .SekceDIV{
     padding-top: 30px;
     padding-bottom: 80px;
 }
-.Text{
-   text-align: left;
-   margin: auto;
-   padding-bottom: 20px;
-   display: flex;
-   justify-content: center;
-   padding-top: 20px;
-}
 .Tlacidlo{
     transition-duration: 1,0s;
-    color: aqua;
+    color: rgb(200, 255, 255);
     background-color: #000000;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 40px;
     text-align: center;
     padding: 20;
     border-radius: 25px;
-    border: 5px solid pink;
+    border: 5px solid white;
     display: flex;
+    opacity: 0.8;
 }
 .Tlacidlo::after{
     content: "Tell me more";
 }
 .Tlacidlo:hover::after{
     content: "Tell me more >>";
-    opacity: 0,5;
+    opacity: 1;
 }
 .Tlacidlo:hover{
     transition-duration: 1s;
     background-color: aliceblue;
     color: black;
-    border: 5px solid green;
+    border: 5px solid black;
     font-size: 45px;
     padding: 2,5rem;
-    opacity: 0,5;
+    opacity: 1;
     content: "Tell me more >>";
 }
 .Tlacidlo:not(:hover){
     transition-duration: 1s;
+}
+.TlacLevo{
+    display: flex;
+    position: relative;
+    left: 120px;
+}
+.TlacPravo{
+    align-self: right;
+    position: relative;
+    display: flex;
+    left: 70%;
 }
 footer{
     background-color: #000000;
@@ -166,50 +172,26 @@ a:active{
 .Nadpis{
     position: relative;
     font-size: 70px;
+    text-decoration: underline overline;
+    text-shadow: #000000 6px 4px 6px;
+    font-weight: bold;
 }
 .NadpisLevo{
     text-align: left;
-    left: 10%;
+    padding-left: 105px;
 }
 .NadpisPravo{
     text-align: right;
-    
+    right: 105px;
 }
-.Obrazek{
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: auto;
-}
-.welcome{
-    background-image: url(./pictures/welcome.png);
-    padding-top: 20px;
-}
-.puzzles{
-    background-image: url(./pictures/puzzles.png);
-}
-.smart-games{
-    background-image: url(./pictures/sg.png);
-    background-position: left;
-    background-position-x: -110px;
-    height: max-content;
-
-}
-.me{
-    background-image: url(./pictures/me.jpg);
-    background-position-y: 25%;
-    padding-bottom: 100px;
-    
-}
-.meTlac{
-    text-align: right;
+.Text{
+    text-align: left;
+    padding-bottom: 20px;
     display: flex;
-    justify-content: right;
-    justify-self: right;
-    position: relative;
-    left: 50px;
-
-}
+    justify-content: center;
+    padding-top: 20px;
+    text-shadow: #000000 4px 4px 4px;
+ }
 .TextLevo{
     text-align: left;
     justify-content: left;
@@ -218,10 +200,39 @@ a:active{
 .TextPravo{
     text-align: right;
     justify-content: right;
-    padding-right: 100px;
+    padding-right: 105px;
 }
-.TextWel{
-    padding-right: 100px;
+.Obrazek{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: auto;
+}
+.welcome{
+    background-image: url(./pictures/welcome1.png);
+    padding-top: 20px;
+    background-position: left;
+}
+.welcome::before{
+    opacity: 0.5;
+}
+.puzzles{
+    background-image: url(./pictures/puzzles.png);
+    background-position: left;
+    background-position-x: 0px;
+}
+.smart-games{
+    background-image: url(./pictures/sg.png);
+    background-position: left;
+    background-position-x: -250px;
+    height: max-content;
+
+}
+.me{
+    background-image: url(./pictures/me.jpg);
+    background-position-y: 25%;
+    padding-bottom: 100px;
+    
 }
 .Logo{
     width: 42px;
